@@ -2,7 +2,7 @@ how to run the code
 
 prepare_dataset.py is the main file for dataset 1 and data_set1.py is the main file for dataset 2.
 
-in the files in the main functions there are calls to the respective classifiers and are commented to run just uncomment the code and run the file.
+in the files there is  main functions and in the main functions there are calls to the respective classifiers and are commented to run just uncomment the code and run the file.
 
 please check the path of the dataset if the code is having issue in running.
 
