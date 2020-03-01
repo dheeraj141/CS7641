@@ -9,10 +9,11 @@ find_optimal_parameter mimic to find the optimum paramemters for the functions a
 
 
 go to the that function in each file and uncomment the function you want to run.
-The code is built using python 3.7 and uses sklearn , numpy , pandas.
+The code is built using python 3.7 and uses sklearn , numpy , pandas, mlrose.
 
 
 
 
 
 the code and the data set has been uploaded on the github and the link is posted below.
+https://github.com/dheeraj141/CS7641/tree/master/Assignment2_ML
