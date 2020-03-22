@@ -1,0 +1,777 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.8)  22 MAR 2020 23:31
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Untitled.tex
+(./Untitled.tex
+LaTeX2e <2018-12-01>
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
+\MT@toks=\toks16
+\MT@count=\count91
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen111
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+\MT@listname@count=\count92
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip43
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen112
+\captionmargin@=\dimen113
+\captionwidth=\dimen114
+\caption@tempdima=\dimen115
+\caption@indent=\dimen116
+\caption@parindent=\dimen117
+\caption@hangindent=\dimen118
+)
+\c@caption@flags=\count93
+\c@ContinuedFloat=\count94
+)
+\c@subfigure=\count95
+\c@subtable=\count96
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count97
+\float@exts=\toks17
+\float@box=\box27
+\@float@everytoks=\toks18
+\@floatcapt=\box28
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen119
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen120
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count98
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count99
+\leftroot@=\count100
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count101
+\DOTSCASE@=\count102
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
+\dotsspace@=\muskip10
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
+\tag@help=\toks20
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
+\andhelp@=\toks21
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks22
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/index/index.sty
+Package: index 2004/01/20 v4.2beta Improved index support (dmj)
+\@indexbox=\insert199
+\indexproofstyle=\toks24
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen128
+\Gin@req@width=\dimen129
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen130
+\Hy@linkcounter=\count110
+\Hy@pagecounter=\count111
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count112
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count113
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen131
+\Fld@menulength=\count114
+\Field@Width=\dimen132
+\Fld@charsize=\dimen133
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count115
+\c@Item=\count116
+\c@Hfootnote=\count117
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count118
+\c@bookmark@seq@number=\count119
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip47
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 17.
+
+(./Untitled.aux)
+\openout1 = `Untitled.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(36.135pt, 525.23788pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 772.77686pt, 36.135pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=525.23788pt
+* \textheight=772.77686pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-73.135pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 24.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count120
+\scratchdimen=\dimen134
+\scratchbox=\box31
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen135
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks26
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box32
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+Package hyperref Info: Link coloring ON on input line 24.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count126
+)
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
+
+(./Untitled.out) (./Untitled.out)
+\@outlinefile=\write3
+\openout3 = `Untitled.out'.
+
+ (./Untitled.toc)
+\tf@toc=\write4
+\openout4 = `Untitled.toc'.
+
+ [1
+
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
+
+ []
+
+<../plots/kmeans_inertia_1.png, id=37, 462.528pt x 346.896pt>
+File: ../plots/kmeans_inertia_1.png Graphic file (type png)
+<use ../plots/kmeans_inertia_1.png>
+Package pdftex.def Info: ../plots/kmeans_inertia_1.png  used on input line 41.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/sil_kmeans_11.png, id=39, 599.23875pt x 775.89874pt>
+File: ../plots/sil_kmeans_11.png Graphic file (type png)
+<use ../plots/sil_kmeans_11.png>
+Package pdftex.def Info: ../plots/sil_kmeans_11.png  used on input line 45.
+(pdftex.def)             Requested size: 164.66245pt x 213.20114pt.
+<../plots/sil_kmeans_12.png, id=40, 599.23875pt x 775.89874pt>
+File: ../plots/sil_kmeans_12.png Graphic file (type png)
+<use ../plots/sil_kmeans_12.png>
+Package pdftex.def Info: ../plots/sil_kmeans_12.png  used on input line 49.
+(pdftex.def)             Requested size: 164.66245pt x 213.20114pt.
+<../plots/kmeans_cluster11.png, id=41, 706.64pt x 257.96375pt>
+File: ../plots/kmeans_cluster11.png Graphic file (type png)
+<use ../plots/kmeans_cluster11.png>
+Package pdftex.def Info: ../plots/kmeans_cluster11.png  used on input line 60.
+(pdftex.def)             Requested size: 164.66245pt x 60.10977pt.
+<../plots/em_11.png, id=42, 706.64pt x 300.12125pt>
+File: ../plots/em_11.png Graphic file (type png)
+<use ../plots/em_11.png>
+Package pdftex.def Info: ../plots/em_11.png  used on input line 64.
+(pdftex.def)             Requested size: 164.66245pt x 69.93317pt.
+<../plots/em_12.png, id=43, 706.64pt x 257.96375pt>
+File: ../plots/em_12.png Graphic file (type png)
+<use ../plots/em_12.png>
+Package pdftex.def Info: ../plots/em_12.png  used on input line 68.
+(pdftex.def)             Requested size: 164.66245pt x 60.10977pt.
+[2 <../plots/kmeans_inertia_1.png> <../plots/sil_kmeans_11.png> <../plots/sil_k
+means_12.png>]
+<../plots/kmeans_inertia_2.png, id=52, 462.528pt x 346.896pt>
+File: ../plots/kmeans_inertia_2.png Graphic file (type png)
+<use ../plots/kmeans_inertia_2.png>
+Package pdftex.def Info: ../plots/kmeans_inertia_2.png  used on input line 82.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/kmeans_sil_21.png, id=53, 599.23875pt x 775.89874pt>
+File: ../plots/kmeans_sil_21.png Graphic file (type png)
+<use ../plots/kmeans_sil_21.png>
+Package pdftex.def Info: ../plots/kmeans_sil_21.png  used on input line 86.
+(pdftex.def)             Requested size: 164.66245pt x 213.20114pt.
+<../plots/kmeans_sil_22.png, id=54, 599.23875pt x 775.89874pt>
+File: ../plots/kmeans_sil_22.png Graphic file (type png)
+<use ../plots/kmeans_sil_22.png>
+Package pdftex.def Info: ../plots/kmeans_sil_22.png  used on input line 90.
+(pdftex.def)             Requested size: 164.66245pt x 213.20114pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
+
+ []
+
+[3 <../plots/kmeans_cluster11.png> <../plots/em_11.png> <../plots/em_12.png> <.
+./plots/kmeans_inertia_2.png> <../plots/kmeans_sil_21.png> <../plots/kmeans_sil
+_22.png>]
+<../plots/kmeans_cluster_21.png, id=67, 771.88374pt x 232.87pt>
+File: ../plots/kmeans_cluster_21.png Graphic file (type png)
+<use ../plots/kmeans_cluster_21.png>
+Package pdftex.def Info: ../plots/kmeans_cluster_21.png  used on input line 101
+.
+(pdftex.def)             Requested size: 164.66245pt x 49.6752pt.
+<../plots/kmeans_cluster_22.png, id=68, 771.88374pt x 232.87pt>
+File: ../plots/kmeans_cluster_22.png Graphic file (type png)
+<use ../plots/kmeans_cluster_22.png>
+Package pdftex.def Info: ../plots/kmeans_cluster_22.png  used on input line 105
+.
+(pdftex.def)             Requested size: 164.66245pt x 49.6752pt.
+<../plots/kmeans_sil_23.png, id=69, 747.79375pt x 227.85126pt>
+File: ../plots/kmeans_sil_23.png Graphic file (type png)
+<use ../plots/kmeans_sil_23.png>
+Package pdftex.def Info: ../plots/kmeans_sil_23.png  used on input line 109.
+(pdftex.def)             Requested size: 164.66245pt x 50.17262pt.
+<../plots/pca_data_set11.png, id=70, 462.528pt x 346.896pt>
+File: ../plots/pca_data_set11.png Graphic file (type png)
+<use ../plots/pca_data_set11.png>
+Package pdftex.def Info: ../plots/pca_data_set11.png  used on input line 125.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/reconstruction_pca_dataset1.png, id=71, 462.528pt x 346.896pt>
+File: ../plots/reconstruction_pca_dataset1.png Graphic file (type png)
+<use ../plots/reconstruction_pca_dataset1.png>
+Package pdftex.def Info: ../plots/reconstruction_pca_dataset1.png  used on inpu
+t line 129.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/pca_d1_2.png, id=72, 505.89pt x 361.35pt>
+File: ../plots/pca_d1_2.png Graphic file (type png)
+<use ../plots/pca_d1_2.png>
+Package pdftex.def Info: ../plots/pca_d1_2.png  used on input line 133.
+(pdftex.def)             Requested size: 164.66245pt x 117.6138pt.
+<../plots/kmeans_d1_pca.png, id=73, 1040.688pt x 624.4128pt>
+File: ../plots/kmeans_d1_pca.png Graphic file (type png)
+<use ../plots/kmeans_d1_pca.png>
+Package pdftex.def Info: ../plots/kmeans_d1_pca.png  used on input line 142.
+(pdftex.def)             Requested size: 201.6903pt x 121.01207pt.
+<../plots/kmeans_d2_pca.png, id=74, 1040.688pt x 624.4128pt>
+File: ../plots/kmeans_d2_pca.png Graphic file (type png)
+<use ../plots/kmeans_d2_pca.png>
+Package pdftex.def Info: ../plots/kmeans_d2_pca.png  used on input line 146.
+(pdftex.def)             Requested size: 201.6903pt x 121.01207pt.
+ [4 <../plots/kmeans_cluster_21.png> <../plots/kmeans_cluster_22.png> <../plots
+/kmeans_sil_23.png>]
+<../plots/gmm_sil_1.png, id=83, 462.528pt x 346.896pt>
+File: ../plots/gmm_sil_1.png Graphic file (type png)
+<use ../plots/gmm_sil_1.png>
+Package pdftex.def Info: ../plots/gmm_sil_1.png  used on input line 156.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/em_pca_d2.png, id=84, 578.16pt x 433.62pt>
+File: ../plots/em_pca_d2.png Graphic file (type png)
+<use ../plots/em_pca_d2.png>
+Package pdftex.def Info: ../plots/em_pca_d2.png  used on input line 160.
+(pdftex.def)             Requested size: 164.66245pt x 123.49696pt.
+<../plots/pca_data_set_2.png, id=85, 462.528pt x 346.896pt>
+File: ../plots/pca_data_set_2.png Graphic file (type png)
+<use ../plots/pca_data_set_2.png>
+Package pdftex.def Info: ../plots/pca_data_set_2.png  used on input line 164.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+ [5 <../plots/pca_data_set11.png> <../plots/reconstruction_pca_dataset1.png> <.
+./plots/pca_d1_2.png> <../plots/kmeans_d1_pca.png> <../plots/kmeans_d2_pca.png>
+ <../plots/gmm_sil_1.png> <../plots/em_pca_d2.png> <../plots/pca_data_set_2.png
+>]
+<../plots/ica_dataset1.png, id=101, 462.528pt x 346.896pt>
+File: ../plots/ica_dataset1.png Graphic file (type png)
+<use ../plots/ica_dataset1.png>
+Package pdftex.def Info: ../plots/ica_dataset1.png  used on input line 175.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/recons_ica_dataset1.png, id=102, 1040.688pt x 624.4128pt>
+File: ../plots/recons_ica_dataset1.png Graphic file (type png)
+<use ../plots/recons_ica_dataset1.png>
+Package pdftex.def Info: ../plots/recons_ica_dataset1.png  used on input line 1
+79.
+(pdftex.def)             Requested size: 164.66245pt x 98.79333pt.
+<../plots/ica_d1_visuak.png, id=103, 462.528pt x 346.896pt>
+File: ../plots/ica_d1_visuak.png Graphic file (type png)
+<use ../plots/ica_d1_visuak.png>
+Package pdftex.def Info: ../plots/ica_d1_visuak.png  used on input line 183.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/kmeans_ica_dataset1_accuracy.png, id=104, 462.528pt x 346.896pt>
+File: ../plots/kmeans_ica_dataset1_accuracy.png Graphic file (type png)
+<use ../plots/kmeans_ica_dataset1_accuracy.png>
+Package pdftex.def Info: ../plots/kmeans_ica_dataset1_accuracy.png  used on inp
+ut line 192.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/kmeans_ica_dataset1_sil.png, id=105, 748.7975pt x 226.8475pt>
+File: ../plots/kmeans_ica_dataset1_sil.png Graphic file (type png)
+<use ../plots/kmeans_ica_dataset1_sil.png>
+Package pdftex.def Info: ../plots/kmeans_ica_dataset1_sil.png  used on input li
+ne 196.
+(pdftex.def)             Requested size: 164.66245pt x 49.88237pt.
+<../plots/em_ica_dataset1_sil.png, id=106, 462.528pt x 346.896pt>
+File: ../plots/em_ica_dataset1_sil.png Graphic file (type png)
+<use ../plots/em_ica_dataset1_sil.png>
+Package pdftex.def Info: ../plots/em_ica_dataset1_sil.png  used on input line 2
+00.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+File: ../plots/kmeans_ica_dataset1_accuracy.png Graphic file (type png)
+<use ../plots/kmeans_ica_dataset1_accuracy.png>
+Package pdftex.def Info: ../plots/kmeans_ica_dataset1_accuracy.png  used on inp
+ut line 209.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+File: ../plots/kmeans_ica_dataset1_sil.png Graphic file (type png)
+<use ../plots/kmeans_ica_dataset1_sil.png>
+Package pdftex.def Info: ../plots/kmeans_ica_dataset1_sil.png  used on input li
+ne 213.
+(pdftex.def)             Requested size: 164.66245pt x 49.88237pt.
+File: ../plots/em_ica_dataset1_sil.png Graphic file (type png)
+<use ../plots/em_ica_dataset1_sil.png>
+Package pdftex.def Info: ../plots/em_ica_dataset1_sil.png  used on input line 2
+17.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+ [6 <../plots/ica_dataset1.png> <../plots/recons_ica_dataset1.png> <../plots/ic
+a_d1_visuak.png> <../plots/kmeans_ica_dataset1_accuracy.png> <../plots/kmeans_i
+ca_dataset1_sil.png> <../plots/em_ica_dataset1_sil.png>]
+<../plots/rp_dataset1.png, id=119, 462.528pt x 346.896pt>
+File: ../plots/rp_dataset1.png Graphic file (type png)
+<use ../plots/rp_dataset1.png>
+Package pdftex.def Info: ../plots/rp_dataset1.png  used on input line 230.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/rp_dataset1_visual.png, id=120, 462.528pt x 346.896pt>
+File: ../plots/rp_dataset1_visual.png Graphic file (type png)
+<use ../plots/rp_dataset1_visual.png>
+Package pdftex.def Info: ../plots/rp_dataset1_visual.png  used on input line 23
+4.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/rp_clustering_dataset1_inertia.png, id=121, 462.528pt x 346.896pt>
+File: ../plots/rp_clustering_dataset1_inertia.png Graphic file (type png)
+<use ../plots/rp_clustering_dataset1_inertia.png>
+Package pdftex.def Info: ../plots/rp_clustering_dataset1_inertia.png  used on i
+nput line 238.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/kmeans_rp_dataset_sil_vis.png, id=122, 1040.688pt x 624.4128pt>
+File: ../plots/kmeans_rp_dataset_sil_vis.png Graphic file (type png)
+<use ../plots/kmeans_rp_dataset_sil_vis.png>
+Package pdftex.def Info: ../plots/kmeans_rp_dataset_sil_vis.png  used on input 
+line 246.
+(pdftex.def)             Requested size: 164.66245pt x 98.79333pt.
+<../plots/em_rp_dataset1_visual.png, id=123, 578.16pt x 433.62pt>
+File: ../plots/em_rp_dataset1_visual.png Graphic file (type png)
+<use ../plots/em_rp_dataset1_visual.png>
+Package pdftex.def Info: ../plots/em_rp_dataset1_visual.png  used on input line
+ 250.
+(pdftex.def)             Requested size: 164.66245pt x 123.49696pt.
+File: ../plots/em_ica_dataset1_sil.png Graphic file (type png)
+<use ../plots/em_ica_dataset1_sil.png>
+Package pdftex.def Info: ../plots/em_ica_dataset1_sil.png  used on input line 2
+54.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/rp_dataset2.png, id=124, 462.528pt x 346.896pt>
+File: ../plots/rp_dataset2.png Graphic file (type png)
+<use ../plots/rp_dataset2.png>
+Package pdftex.def Info: ../plots/rp_dataset2.png  used on input line 265.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/rp_dataset2_visual.png, id=125, 462.528pt x 346.896pt>
+File: ../plots/rp_dataset2_visual.png Graphic file (type png)
+<use ../plots/rp_dataset2_visual.png>
+Package pdftex.def Info: ../plots/rp_dataset2_visual.png  used on input line 26
+9.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/rp_dataset2_kmeans_visual_sil.png, id=126, 1040.688pt x 624.4128pt>
+File: ../plots/rp_dataset2_kmeans_visual_sil.png Graphic file (type png)
+<use ../plots/rp_dataset2_kmeans_visual_sil.png>
+Package pdftex.def Info: ../plots/rp_dataset2_kmeans_visual_sil.png  used on in
+put line 273.
+(pdftex.def)             Requested size: 164.66245pt x 98.79333pt.
+ [7 <../plots/rp_dataset1.png> <../plots/rp_dataset1_visual.png> <../plots/rp_c
+lustering_dataset1_inertia.png> <../plots/kmeans_rp_dataset_sil_vis.png> <../pl
+ots/em_rp_dataset1_visual.png>]
+<../plots/kmeans_rp_dataset2_inertia.png, id=140, 462.528pt x 346.896pt>
+File: ../plots/kmeans_rp_dataset2_inertia.png Graphic file (type png)
+<use ../plots/kmeans_rp_dataset2_inertia.png>
+Package pdftex.def Info: ../plots/kmeans_rp_dataset2_inertia.png  used on input
+ line 285.
+(pdftex.def)             Requested size: 164.66245pt x 123.49564pt.
+<../plots/rp_dataset2_em.png, id=141, 578.16pt x 433.62pt>
+File: ../plots/rp_dataset2_em.png Graphic file (type png)
+<use ../plots/rp_dataset2_em.png>
+Package pdftex.def Info: ../plots/rp_dataset2_em.png  used on input line 289.
+(pdftex.def)             Requested size: 164.66245pt x 123.49696pt.
+File: ../plots/rp_dataset2_kmeans_visual_sil.png Graphic file (type png)
+<use ../plots/rp_dataset2_kmeans_visual_sil.png>
+Package pdftex.def Info: ../plots/rp_dataset2_kmeans_visual_sil.png  used on in
+put line 293.
+(pdftex.def)             Requested size: 164.66245pt x 98.79333pt.
+ [8 <../plots/rp_dataset2.png> <../plots/rp_dataset2_visual.png> <../plots/rp_d
+ataset2_kmeans_visual_sil.png> <../plots/kmeans_rp_dataset2_inertia.png> <../pl
+ots/rp_dataset2_em.png>]
+<../plots/acc_neural_network_4.png, id=153, 462.528pt x 346.896pt>
+File: ../plots/acc_neural_network_4.png Graphic file (type png)
+<use ../plots/acc_neural_network_4.png>
+Package pdftex.def Info: ../plots/acc_neural_network_4.png  used on input line 
+310.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/test_time_nn_4.png, id=154, 462.528pt x 346.896pt>
+File: ../plots/test_time_nn_4.png Graphic file (type png)
+<use ../plots/test_time_nn_4.png>
+Package pdftex.def Info: ../plots/test_time_nn_4.png  used on input line 314.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/train_time_nn_4.png, id=155, 462.528pt x 346.896pt>
+File: ../plots/train_time_nn_4.png Graphic file (type png)
+<use ../plots/train_time_nn_4.png>
+Package pdftex.def Info: ../plots/train_time_nn_4.png  used on input line 318.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/iter_nn_4.png, id=156, 462.528pt x 346.896pt>
+File: ../plots/iter_nn_4.png Graphic file (type png)
+<use ../plots/iter_nn_4.png>
+Package pdftex.def Info: ../plots/iter_nn_4.png  used on input line 322.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/kmeans_nn_acc_5.png, id=157, 462.528pt x 346.896pt>
+File: ../plots/kmeans_nn_acc_5.png Graphic file (type png)
+<use ../plots/kmeans_nn_acc_5.png>
+Package pdftex.def Info: ../plots/kmeans_nn_acc_5.png  used on input line 332.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/train_time_kmeans_5.png, id=158, 462.528pt x 346.896pt>
+File: ../plots/train_time_kmeans_5.png Graphic file (type png)
+<use ../plots/train_time_kmeans_5.png>
+Package pdftex.def Info: ../plots/train_time_kmeans_5.png  used on input line 3
+36.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/test_time_nn_5.png, id=159, 462.528pt x 346.896pt>
+File: ../plots/test_time_nn_5.png Graphic file (type png)
+<use ../plots/test_time_nn_5.png>
+Package pdftex.def Info: ../plots/test_time_nn_5.png  used on input line 340.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/kmeans_iter_nn_5.png, id=160, 462.528pt x 346.896pt>
+File: ../plots/kmeans_iter_nn_5.png Graphic file (type png)
+<use ../plots/kmeans_iter_nn_5.png>
+Package pdftex.def Info: ../plots/kmeans_iter_nn_5.png  used on input line 344.
+
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/em_acc_nn_5.png, id=161, 462.528pt x 346.896pt>
+File: ../plots/em_acc_nn_5.png Graphic file (type png)
+<use ../plots/em_acc_nn_5.png>
+Package pdftex.def Info: ../plots/em_acc_nn_5.png  used on input line 353.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/em_nn_train_5.png, id=162, 462.528pt x 346.896pt>
+File: ../plots/em_nn_train_5.png Graphic file (type png)
+<use ../plots/em_nn_train_5.png>
+Package pdftex.def Info: ../plots/em_nn_train_5.png  used on input line 357.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/em_test_nn_5.png, id=163, 462.528pt x 346.896pt>
+File: ../plots/em_test_nn_5.png Graphic file (type png)
+<use ../plots/em_test_nn_5.png>
+Package pdftex.def Info: ../plots/em_test_nn_5.png  used on input line 361.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+<../plots/em_iter_nn_5.png, id=164, 462.528pt x 346.896pt>
+File: ../plots/em_iter_nn_5.png Graphic file (type png)
+<use ../plots/em_iter_nn_5.png>
+Package pdftex.def Info: ../plots/em_iter_nn_5.png  used on input line 365.
+(pdftex.def)             Requested size: 124.74358pt x 93.5573pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
+ [9 <../plots/acc_neural_network_4.png> <../plots/test_time_nn_4.png> <../plots
+/train_time_nn_4.png> <../plots/iter_nn_4.png>] [10 <../plots/kmeans_nn_acc_5.p
+ng> <../plots/train_time_kmeans_5.png> <../plots/test_time_nn_5.png> <../plots/
+kmeans_iter_nn_5.png> <../plots/em_acc_nn_5.png> <../plots/em_nn_train_5.png> <
+../plots/em_test_nn_5.png> <../plots/em_iter_nn_5.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
+ (./Untitled.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
+Package rerunfilecheck Info: File `Untitled.out' has not changed.
+(rerunfilecheck)             Checksum: 9BBA6550006D94E18110E78135AD1399;318.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 371.
+ ) 
+Here is how much of TeX's memory you used:
+ 9197 strings out of 492616
+ 146277 string characters out of 6129482
+ 276011 words of memory out of 5000000
+ 12874 multiletter control sequences out of 15000+600000
+ 12044 words of font info for 79 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,9n,40p,1656b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on Untitled.pdf (10 pages, 5693311 bytes).
+PDF statistics:
+ 206 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 34 named destinations out of 1000 (max. 500000)
+ 10521 words of extra memory for PDF output out of 12000 (max. 10000000)
+

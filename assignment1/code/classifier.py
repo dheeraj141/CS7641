@@ -336,7 +336,7 @@ def neural_network( train_data, train_labels, test_data, test_labels,plotting, l
         print( 'The accuracy of the neural network classifier is {}'.format( accuracy_score( test_labels, predicted_labels)))
         print( 'the training time of {} is {}'.format( clf_name, train_time))
         print( 'the testing time of {} is {}'.format( clf_name, testing_time))
-    return train_time, testing_time, accuracy
+    return train_time, testing_time, accuracy, clf.n_iter_
 
 
 

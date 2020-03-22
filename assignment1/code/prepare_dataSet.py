@@ -1,9 +1,9 @@
 import numpy as np 
 from sklearn import preprocessing 
-import classifier as ct
+#import classifier as ct
 import pdb
 from sklearn import tree, svm
-import graph_tools as gt
+#import graph_tools as gt
 import pandas as pd
 import matplotlib.pyplot as plt 
 
@@ -121,13 +121,13 @@ def extract_labels( file):
 
 
 
-data_set = prepare_dataSet( '../DataSet/train/X_train.txt')
-data_set = preprocessing.scale(data_set)
-new_labels = extract_labels('../DataSet/train/y_train.txt')
-test_data = prepare_dataSet('../DataSet/test/X_test.txt')
-test_data= preprocessing.scale( test_data)
+X_train1 = prepare_dataSet( '../DataSet/train/X_train.txt')
+X_train1 = preprocessing.scale(data_set)
+y_train1 = extract_labels('../DataSet/train/y_train.txt')
+X_test1 = prepare_dataSet('../DataSet/test/X_test.txt')
+X_test1= preprocessing.scale( test_data)
 
-test_labels = extract_labels('../DataSet/test/y_test.txt')
+y_test1 = extract_labels('../DataSet/test/y_test.txt')
 
 
 results = list()
@@ -163,7 +163,7 @@ def main():
     #ct.optimized_svm_classifier( data_set, new_labels, test_data, test_labels, True, 'rbf')
 
     #ct.optimized_svm_classifier( data_set, new_labels, test_data, test_labels, True, 'poly')
-    ct.GradientBoosting_classifier( data_set, new_labels, test_data, test_labels, plotting )
+    #ct.GradientBoosting_classifier( data_set, new_labels, test_data, test_labels, plotting )
     #ct.optimized_neural_network( data_set, new_labels, test_data, test_labels, True)
 
 
