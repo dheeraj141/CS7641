@@ -1,5 +1,0 @@
-\contentsline {section}{\numberline {1} Kmeans Clustering }{2}{section.1}% 
-\contentsline {section}{\numberline {2}PCA}{4}{section.2}% 
-\contentsline {section}{\numberline {3} Neural network }{8}{section.3}% 
-\contentsline {subsection}{\numberline {3.1} Dimensionality reduction and neural network }{8}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2} Neural networks and clustering }{9}{subsection.3.2}% 
