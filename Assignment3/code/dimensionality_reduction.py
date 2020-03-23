@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import warnings
 import os
-from sklearn.decomposition import PCA 
-from sklearn.decomposition import FastICA, TruncatedSVD
-from sklearn.decomposition import NMF as NMF_sk
+from sklearn.decomposition import PCA , FastICA
 from numpy import linalg as LA
 import scipy
 from sklearn.random_projection import GaussianRandomProjection
@@ -15,7 +13,6 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score, adjusted_mutual_info_score, silhouette_samples,mean_squared_error
 import sys
 import time
-import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import pandas as pd
 from sklearn.metrics import homogeneity_score, completeness_score, \
@@ -79,6 +76,7 @@ def extract_labels( file):
 
 
 X_train1 = prepare_dataSet( '../DataSet/train/X_train.txt')
+data2 = X_train1
 X_train1 = preprocessing.StandardScaler().fit_transform(X_train1)
 #X_train1 = preprocessing.scale(X_train1)
 y_train1 = extract_labels('../DataSet/train/y_train.txt')
@@ -90,7 +88,7 @@ y_test1 = extract_labels('../DataSet/test/y_test.txt')
 
 
 
-def pca_analysis_accuracy( X,y):
+def kmeans_accuracy( X,y):
 	scaler=preprocessing.StandardScaler()#instantiate
 	scaler.fit(x) 
 	accuracy = []
@@ -106,6 +104,25 @@ def pca_analysis_accuracy( X,y):
 	plt.ylabel('accuracy')
 	plt.grid()
 	plt.show()
+
+
+
+def EM_accuracy( X,y):
+	scaler=preprocessing.StandardScaler()#instantiate
+	scaler.fit(x) 
+	accuracy = []
+	clusters = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+	X_scaled=scaler.transform(x)
+	for i in range( 1, 15):
+		gmm=mixture.GaussianMixture(i, n_init=20).fit(X) 
+		labels=gmm.predict(X)
+		accuracy.append( accuracy_score( labels, y))
+	plt.plot(clusters, accuracy)
+	plt.xlabel('Clusters')
+	plt.ylabel('accuracy')
+	plt.grid()
+	plt.show()
+
 
 
 
@@ -136,7 +153,7 @@ def reconstruction_error_pca( x):
 	scaler.fit(x) 
 	X_scaled=scaler.transform(x)
 	
-	max_comp=20
+	max_comp=150
 	start=1
 	error_record=[]
 	for i in range(start,max_comp):
@@ -206,7 +223,7 @@ def reconstruction_error_rp( x):
 def kurtosis_analysis(X, n):
 	arr = []
 	for i in range(1,n):
-		dim_red = FastICA(n_components = i, random_state = 42, max_iter = 400, tol = 0.01).fit_transform(X)
+		dim_red = FastICA(n_components = i, random_state = 42, max_iter = 500, tol = 0.05).fit_transform(X)
 		kurt = scipy.stats.kurtosis(dim_red)
 		arr.append(np.mean(kurt))
 	breakpoint()
@@ -219,6 +236,9 @@ def kurtosis_analysis(X, n):
 
 
 def RP_analysis(X):
+	scaler=preprocessing.StandardScaler()#instantiate
+	scaler.fit(X) 
+	X=scaler.transform(X)
 	arr5 = []
 	for i in range(1,X.shape[1]):
 		rp = GaussianRandomProjection(n_components=i, random_state=5)
@@ -278,7 +298,7 @@ def plotting_data2( X_pca, y):
 	Yax=X_pca[:,1]
 	Zax = X_pca[:,2]
 	labels=y
-	cdict={1:'red',2:'green', 3:'blue', 4:'yellow',5:'black',6:'orange'}
+	cdict={1:'red',2:'green', 3:'blue', 4:'yellow',5:'magenta',6:'black'}
 	labl={1:'walking',2:'Climbing up', 3: 'climbing down', 4: 'sitting',5:'standing', 6:'laying'}
 	marker={1:'*',2:'o',3:'.',4:'v',5:'^',6:'<'}
 	#alpha={0:.3, 1:.5}
@@ -329,9 +349,10 @@ def Plot_2d(Z,Y):
 def clustering_analysis_after_dimension( x, y):
 	Kmeans_clustering(x )
 	Kmeans_silhouette_analysis( x, y)
-	pca_analysis_accuracy( x, y)
-	#gmm_cluster = gmm_analysis( x,y)
+	kmeans_accuracy( x, y)
+	gmm_cluster = gmm_analysis( x,y)
 	#gmm_using_silhouette(x, y)
+	EM_accuracy( x, y)
 
 def Plot_3d(Z,Y):
     fig = plt.figure()
@@ -382,6 +403,41 @@ def plotting_data1(pca,  X_pca, y):
 	plt.xticks(range(len(cancer.feature_names)),cancer.feature_names,rotation=65,ha='left')
 	plt.tight_layout()
 	plt.show()
+
+
+
+
+
+def reconstruction_error_K_best( x,y,n):
+	x = preprocessing.MinMaxScaler().fit_transform(x)
+	
+	max_comp=n
+	start=1
+	error_record=[]
+	for i in range(start,max_comp):
+		pca = SelectKBest(chi2, k=i)
+		pca2_results = pca.fit_transform(x, y)
+		pca2_proj_back=pca.inverse_transform(pca2_results)
+		total_loss=LA.norm((x-pca2_proj_back),None)
+		error_record.append(total_loss)
+	plt.clf()
+	plt.figure(figsize=(5,5))
+	plt.title("reconstruct error of Ica")
+	plt.plot(error_record,'r')
+	plt.xticks(range(len(error_record)), range(start,max_comp), rotation='vertical')
+	plt.xlim([-1, len(error_record)])
+	plt.grid()
+	plt.show()
+
+
+
+
+
+
+
+
+
+
 def neural_network_analysis( x,y):
 
 	x1= x
@@ -797,7 +853,7 @@ def nn_experiment5( x, y):
 
 
 breakpoint()
-#reconstruction_error_pca(x)
+#reconstruction_error_pca(X_train1)
 
 #neural_network_analysis_EM( x, y)
 
@@ -807,6 +863,8 @@ breakpoint()
 #kurtosis_analysis(x)
 #reconstruction_error_ica(x)
 #pca_analysis(x)
+#EM_accuracy( x, y)
+#EM_accuracy( X_train1, y_train1)
 
 
 #pca_analysis_accuracy( x, y)
@@ -838,19 +896,21 @@ breakpoint()
 
 ### ICA ###
 #kurtosis_analysis(x)
-#Z_2d = FastICA(n_components = 2).fit_transform(x)
-#Plot_2d(Z_2d,y)
+#Z_2d = FastICA(n_components = 2).fit_transform(X_train1)
+#Plot_2d(Z_2d,y_train1)
 
 #Z_3d = FastICA(n_components = 3).fit_transform(x)
 #Plot_3d(Z_3d,y)
 
 
-#best_n = 2
+best_n = 5
+#pca_analysis_accuracy(x,y)
 
 #mod_data1_ica = FastICA(n_components = best_n).fit_transform(x)
 #Kmeans_clustering(mod_data1_ica )
 #Kmeans_silhouette_analysis( mod_data1_ica, y)
 #pca_analysis_accuracy( mod_data1_ica, y)
+#k_means(  2, mod_data1_ica, y)
 #gmm_cluster = gmm_analysis( mod_data1_ica,y)
 #gmm_using_silhouette(mod_data1_ica, y)
 
@@ -858,23 +918,62 @@ breakpoint()
 
 
 
+### Kbest ### 
+
+#reconstruction_error_K_best( x, y, 30)
+#reconstruction_error_K_best( X_train1, y_train1, 561)
+
+#x1 = preprocessing.MinMaxScaler().fit_transform(x)
+#data_k_best = SelectKBest(chi2, k=2).fit_transform(x1, y)
+
+#Plot_2d(data_k_best,y)
+
+#best_n = 24 
+#x1 = preprocessing.MinMaxScaler().fit_transform(x)
+#data_k_best = SelectKBest(chi2, k=best_n).fit_transform(x1, y)
+#EM_accuracy( x, y)
+#clustering_analysis_after_dimension( data_k_best, y)
+
+
+#x1 = preprocessing.MinMaxScaler().fit_transform(X_train1)
+
+#best_n = 530
+#data_k_best = SelectKBest(chi2, k=best_n).fit_transform(x1, y_train1)
+#clustering_analysis_after_dimension( data_k_best, y_train1)
+
+#Plot_2d(data_k_best,y_train1)
+#plotting_data2(data_k_best, y_train1 )
+
+
+
+
+
+
+
+
 ### ICA  Data set 2###
 
-#kurtosis_analysis(X_train1, 100)
+#kurtosis_analysis(X_train1, 150)
 #reconstruction_error_ica(X_train1, 100)
 #Z_2d = FastICA(n_components = 2).fit_transform(X_train1)
 #Plot_2d(Z_2d,y_train1)
 
 #Z_3d = FastICA(n_components = 3).fit_transform(X_train1)
+#plotting_data2( Z_3d, y_train1)
+
 #Plot_3d(Z_3d,y_train1)
-#best_n = 10
+#best_n = 3
 
 #mod_data1_ica = FastICA(n_components = best_n).fit_transform(X_train1)
+#clustering_analysis_after_dimension(mod_data1_ica, y_train1 )
 #Kmeans_clustering(mod_data1_ica )
 #Kmeans_silhouette_analysis( mod_data1_ica, y_train1)
 #pca_analysis_accuracy( mod_data1_ica, y_train1)
 #gmm_cluster = gmm_analysis( mod_data1_ica,y_train1)
 #gmm_using_silhouette(mod_data1_ica, y_train1)
+
+
+
 
 
 
@@ -885,7 +984,7 @@ RP_analysis(X_train1)
 
 #Z_3d = GaussianRandomProjection(n_components = 3).fit_transform(X_train1)
 #Plot_3d(Z_3d,y_train1)
-best_n = 475
+best_n = 500
 
 data2_rp = GaussianRandomProjection(n_components = best_n).fit_transform(X_train1)
 clustering_analysis_after_dimension( data2_rp, y_train1)
@@ -896,7 +995,8 @@ clustering_analysis_after_dimension( data2_rp, y_train1)
 #Z_2d = GaussianRandomProjection(n_components = 2).fit_transform(X_train1)
 #Plot_2d(Z_2d,y_train1)
 
-#Z_3d = GaussianRandomProjection(n_components = 3).fit_transform(X_train1)
+Z_3d = GaussianRandomProjection(n_components = 3).fit_transform(X_train1)
+plotting_data2( Z_3d, y_train1)
 #Plot_3d(Z_3d,y_train1)
 best_n = 475
 
