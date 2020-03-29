@@ -90,30 +90,57 @@ y_test1 = extract_labels('../DataSet/test/y_test.txt')
 
 
 
+def EM(n_clust, data_frame, true_labels, variance):
+    gmm=mixture.GaussianMixture(n_clust, n_init=20, covariance_type = variance).fit(data_frame) 
+    c_labels=gmm.predict(data_frame)
+    df = pd.DataFrame({'clust_label': c_labels, 'orig_label': true_labels.tolist()})
+    ct = pd.crosstab(df['clust_label'], df['orig_label'])
+    #y_clust = k_means.predict(data_frame)
+    breakpoint()
+    print( ct)
+    print( "SA score is " , silhouette_score(data_frame, c_labels, metric='euclidean'))
+
+
 
 
 	
 
 
 
+def k_means1(n_clust, data_frame, true_labels):
+
+    for i in range( 2, 3):
+    	k_means = KMeans(n_clusters = i, random_state=14, n_init = 50)
+    	k_means.fit(data_frame)
+    	c_labels = k_means.labels_
+    	y_clust = k_means.predict(data_frame)
+    	df = pd.DataFrame({'clust_label': c_labels, 'orig_label': true_labels.tolist()})
+    	ct = pd.crosstab(df['clust_label'], df['orig_label'])
+
+
+
+    	
+    	print( ct)
+    	print( " Silhouette score ", silhouette_score(data_frame, y_clust, metric='euclidean'))
+    	#print('% 9s' % 'inertia  homo    compl   v-meas   ARI     AMI     silhouette')
+    	#print('%i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'%(k_means.inertia_,
+    	#	homogeneity_score(true_labels, y_clust),completeness_score(true_labels, y_clust),
+    	#	v_measure_score(true_labels, y_clust),adjusted_rand_score(true_labels, y_clust),
+    	#	adjusted_mutual_info_score(true_labels, y_clust),
+    	#	silhouette_score(data_frame, y_clust, metric='euclidean')))
+
+
 def k_means(n_clust, data_frame, true_labels):
-    k_means = KMeans(n_clusters = n_clust, random_state=14, n_init=30)
-    k_means.fit(data_frame)
-    c_labels = k_means.labels_
-    df = pd.DataFrame({'clust_label': c_labels, 'orig_label': true_labels.tolist()})
-    ct = pd.crosstab(df['clust_label'], df['orig_label'])
-    y_clust = k_means.predict(data_frame)
-    breakpoint()
-    print( ct)
-    print('% 9s' % 'inertia  homo    compl   v-meas   ARI     AMI     silhouette')
-    print('%i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
-      %(k_means.inertia_,
-      homogeneity_score(true_labels, y_clust),
-      completeness_score(true_labels, y_clust),
-      v_measure_score(true_labels, y_clust),
-      adjusted_rand_score(true_labels, y_clust),
-      adjusted_mutual_info_score(true_labels, y_clust),
-      silhouette_score(data_frame, y_clust, metric='euclidean')))
+
+    for i in range( 2, 10):
+    	k_means = KMeans(n_clusters = i, random_state=14, n_init = 50)
+    	k_means.fit(data_frame)
+    	c_labels = k_means.labels_
+    	df = pd.DataFrame({'clust_label': c_labels, 'orig_label': true_labels.tolist()})
+    	ct = pd.crosstab(df['clust_label'], df['orig_label'])
+    	y_clust = k_means.predict(data_frame)
+    	print( ct)
+    	print( " Silhouette score ", silhouette_score(data_frame, y_clust, metric='euclidean'))
 
 def Kmeans_clustering( X):
 	clusters = list(range( 1, 10))
@@ -121,7 +148,7 @@ def Kmeans_clustering( X):
 
 	for c in clusters:
 		print(c)
-		cluster = KMeans( n_clusters =c, random_state=14, init= 'random')
+		cluster = KMeans( n_clusters =c, random_state=14, n_init = 50)
 		cluster_labels = cluster.fit(X)
 		inertia_arr.append( cluster.inertia_)
 	inertia_arr =np.array( inertia_arr)
@@ -204,7 +231,7 @@ def SelBest(arr:list, X:int)->list:
     return arr[dx]
 
 def gmm_using_silhouette(X, labels):
-	n_clusters=np.arange(2, 15)
+	n_clusters=np.arange(2, 10)
 	sils=[]
 	sils_err=[]
 	iterations=20
@@ -236,7 +263,7 @@ def gmm_analysis(X,y):
 	cv_types = ['spherical', 'tied', 'diag', 'full']
 	for cv_type in cv_types:
 	    for n_components in n_components_range:
-	        gmm = mixture.GaussianMixture(n_components=n_components, covariance_type=cv_type)
+	        gmm = mixture.GaussianMixture(n_components=n_components, covariance_type=cv_type, max_iter = 200)
 	        gmm.fit(X)
 	        bic.append(gmm.bic(X))
 	        if bic[-1] < lowest_bic:
@@ -289,11 +316,15 @@ def gmm_analysis(X,y):
 	return best_num
 
 
+#breakpoint()
 
 
 #Kmeans_clustering(x)
-#Kmeans_silhouette_analysis(X_train1, y_train1)
+#EM( 2, x, y)
+#Kmeans_clustering(x)
+#Kmeans_silhouette_analysis(x, y)
 #k_means( 2, x, y)
+
 #k_means( 2, X_train1, y_train1)
 #gmm_cluster = gmm_analysis( X_train1,y_train1)
 #gmm_using_silhouette(X_train1, y_train1)

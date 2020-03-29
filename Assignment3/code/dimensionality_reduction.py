@@ -21,7 +21,7 @@ from sklearn import mixture
 import itertools
 from scipy import linalg
 from mpl_toolkits.mplot3d import Axes3D
-from clustering import k_means, Kmeans_clustering,Kmeans_silhouette_analysis, gmm_analysis, gmm_using_silhouette
+from clustering import k_means, Kmeans_clustering,Kmeans_silhouette_analysis, gmm_analysis, gmm_using_silhouette, EM,k_means1
 from sklearn.metrics import accuracy_score
 from numpy import linalg as LA
 from scipy.linalg import pinv
@@ -122,6 +122,29 @@ def EM_accuracy( X,y):
 	plt.ylabel('accuracy')
 	plt.grid()
 	plt.show()
+
+
+
+
+def find_eigen_values( x, y):
+	y = np.transpose(x)
+	cov_mat = np.cov( [ y[k,:] for k in range( len(y))])
+	eig_val_cov, eig_vec_cov = np.linalg.eig(cov_mat)
+	for i in range(len(eig_val_cov)):
+		eigvec_cov = eig_vec_cov[:,i].reshape(1,len(y)).T
+		#print('Eigenvalue {} from covariance matrix: {}'.format(i+1, eig_val_cov[i]))
+	eig_pairs = [(np.abs(eig_val_cov[i]), eig_vec_cov[:,i]) for i in range(len(eig_val_cov))]
+	eig_pairs.sort(key=lambda x: x[0], reverse=True)
+	eig_values= [lis[0] for lis in eig_pairs]
+	plt.figure() 
+	plt.bar(np.arange( 1, len(eig_values)+1),eig_values)
+	plt.xlabel('Number of Components')
+	plt.ylabel('Eigenvalues')
+	plt.title(" Eigen values in Decreasing order")
+	plt.grid()
+	plt.show() 
+
+
 
 
 
@@ -232,6 +255,87 @@ def kurtosis_analysis(X, n):
 	plt.ylabel('Kurtosis Value')
 	plt.grid()
 	plt.show()
+
+
+
+def kurtosis_analysis_new(x, y):
+	#x = preprocessing.StandardScaler().fit_transform(x)
+	arr = []
+	max_features = 10
+	ica = FastICA(n_components = max_features)
+	S = ica.fit_transform(x)
+
+	#breakpoint()
+
+	kurtosis_values = [ (scipy.stats.kurtosis(  S[:,k])) for k in range( max_features) ]
+	kurtosis_pairs = [(np.abs(kurtosis_values[i]), i) for i in range(len(kurtosis_values))]
+	kurtosis_pairs .sort(key=lambda x: x[0], reverse=True)
+	x_values = [lis[1] for lis in kurtosis_pairs]
+	y_values= [lis[0] for lis in kurtosis_pairs] 
+
+	plt.figure() 
+
+	plt.bar(np.arange( 1, max_features+1),y_values)
+	plt.xlabel('Number of Components')
+	plt.ylabel('Kurtosis Value')
+	plt.grid()
+	plt.show()
+	accuracy = []
+
+	for i in range( len(x_values)):
+		data = S[:,x_values[:i+1]]
+		#clustering_analysis_after_dimension( data, y)
+		#k_means = KMeans(n_clusters = 2, random_state=14, n_init=30)
+		#k_means.fit(data)
+		#c_labels = k_means.labels_
+		#accuracy.append( accuracy_score( c_labels, y))
+
+	plt.figure() 
+
+	plt.plot(np.arange( 1, max_features+1),accuracy)
+	plt.xlabel('Number of Components')
+	plt.ylabel('Kurtosis Value')
+	plt.grid()
+	plt.show()
+
+
+
+def kurtosis_analysis_new1(x, y,n):
+	#x = preprocessing.StandardScaler().fit_transform(x)
+	arr = []
+	max_features = n
+	ica = FastICA(n_components=max_features, max_iter =500)
+	S = ica.fit_transform(x)
+
+	#breakpoint()
+
+	kurtosis_values = [ (scipy.stats.kurtosis(  S[:,k])) for k in range( max_features) ]
+	kurtosis_pairs = [(np.abs(kurtosis_values[i]), i) for i in range(len(kurtosis_values))]
+	kurtosis_pairs .sort(key=lambda x: x[0], reverse=True)
+	x_values = [lis[1] for lis in kurtosis_pairs]
+	y_values= [lis[0] for lis in kurtosis_pairs] 
+
+	plt.figure() 
+
+	plt.bar(np.arange( 1, max_features+1),y_values)
+	plt.xlabel('Number of Components')
+	plt.ylabel('Kurtosis Value')
+	plt.grid()
+	plt.show()
+	k_means( 2, S, y)
+	EM( 2, S, y, 'spherical')
+	EM( 2, S, y, 'tied')
+	EM( 2, S, y, 'diag')
+	EM( 2, S, y, 'full')
+	#clustering_analysis_after_dimension( S, y)
+	
+	accuracy = []
+
+	for i in range( len(x_values)):
+		data = S[:,x_values[:i+1]]
+		EM( )
+		#clustering_analysis_after_dimension( data, y)
+	
 
 
 
@@ -347,12 +451,13 @@ def Plot_2d(Z,Y):
 
 
 def clustering_analysis_after_dimension( x, y):
-	Kmeans_clustering(x )
-	Kmeans_silhouette_analysis( x, y)
-	kmeans_accuracy( x, y)
-	gmm_cluster = gmm_analysis( x,y)
-	#gmm_using_silhouette(x, y)
-	EM_accuracy( x, y)
+	#Kmeans_clustering(x )
+	#Kmeans_silhouette_analysis( x, y)
+	#kmeans_accuracy( x, y)
+	#k_means1(2, x, y)
+	#gmm_cluster = gmm_analysis( x,y)
+	gmm_using_silhouette(x, y)
+	#EM_accuracy( x, y)
 
 def Plot_3d(Z,Y):
     fig = plt.figure()
@@ -379,7 +484,7 @@ def Plot_3d(Z,Y):
     plt.show()
 
 
-def plotting_data1(pca,  X_pca, y):
+def plotting_data1(X_pca, y):
 	cancer = datasets.load_breast_cancer()
 	Xax=X_pca[:,0]
 	Yax=X_pca[:,1]
@@ -393,15 +498,9 @@ def plotting_data1(pca,  X_pca, y):
 	for l in np.unique(labels):
 		ix=np.where(labels==l)
 		ax.scatter(Xax[ix],Yax[ix],c=cdict[l],s=40,label=labl[l],marker=marker[l],alpha=alpha[l])
-	#plt.xlabel("First Principal Component",fontsize=14)
-	#plt.ylabel("Second Principal Component",fontsize=14)
-	#plt.legend()
-	#plt.show()
-	plt.matshow(pca.components_,cmap='viridis')
-	plt.yticks([0,1,2],['1st Comp','2nd Comp','3rd Comp'],fontsize=10)
-	plt.colorbar()
-	plt.xticks(range(len(cancer.feature_names)),cancer.feature_names,rotation=65,ha='left')
-	plt.tight_layout()
+	plt.xlabel("First Principal Component",fontsize=14)
+	plt.ylabel("Second Principal Component",fontsize=14)
+	plt.legend()
 	plt.show()
 
 
@@ -838,6 +937,87 @@ def nn_experiment5( x, y):
 
 
 
+def PCA_on_datasets( x, y,n):
+
+	mod_data = PCA( n_components= n).fit_transform(x)
+	k_means1( 2, x, y)
+	EM( 6, mod_data, y, 'full')
+	#pca_analysis_accuracy( x, y)
+	#X_pca1 = pca_analysis( x)
+	#plotting_data1(pca,  X_pca1, y)
+	#X_pca2 = pca_analysis( X_train1)
+	#plotting_data2( X_pca2, y_train1)
+	#breakpoint()
+	#mod_data1 = X_pca1[:, :2]
+	#mod_data2 = X_pca2[:, :2]
+
+
+	#pca_analysis_accuracy( X_train1, y_train1)
+
+
+	#pca_analysis_accuracy( mod_data2, y_train1)
+
+
+
+def RP_on_datasets( x, y,n):
+	x = preprocessing.StandardScaler().fit_transform(x)
+	#RP_analysis(x)
+	#Z_2d = GaussianRandomProjection(n_components = 2).fit_transform(X_train1)
+	#Plot_2d(Z_2d,y_train1)
+
+	#Z_3d = GaussianRandomProjection(n_components = 3).fit_transform(X_train1)
+	#Plot_3d(Z_3d,y_train1)
+	best_n = n
+
+	data_rp = GaussianRandomProjection(n_components = best_n).fit_transform(x)
+
+	#k_means1( 2, data_rp, y)
+	#EM( 2, data_rp, y, 'full')
+	EM( 6, data_rp, y, 'full')
+
+
+	#clustering_analysis_after_dimension( data_rp, y)
+
+
+
+
+def K_best_on_dataset( x, y, n):
+	x = preprocessing.MinMaxScaler().fit_transform(x)
+	### Kbest ### 
+
+	#reconstruction_error_K_best( x, y, 30)
+
+	#reconstruction_error_K_best( X_train1, y_train1, 561)
+
+	#x1 = preprocessing.MinMaxScaler().fit_transform(x)
+
+	#data_k_best = SelectKBest(chi2, k=2).fit_transform(x1, y)
+
+	#Plot_2d(data_k_best,y)
+
+	best_n = n
+
+	
+
+	data_k_best = SelectKBest(chi2, k=best_n).fit_transform(x, y)
+	#k_means1( 2, data_k_best, y)
+
+	EM( 6, data_k_best, y, 'full')
+
+
+
+def ICA_on_datasets( x, y, n):
+	### ICA ###
+	#kurtosis_analysis(x)
+	#Z_2d = FastICA(n_components = 2).fit_transform(X_train1)
+	#Plot_2d(Z_2d,y_train1)
+	best_n = n
+
+	mod_data = FastICA(n_components = best_n).fit_transform(x)
+	#k_means1( 2, x, y)
+	EM( 6, mod_data, y, 'full')
+
+	#Plot_3d(Z_3d,y)
 
 
 
@@ -847,12 +1027,54 @@ def nn_experiment5( x, y):
 
 
 
+mod_data =  PCA( n_components = 60).fit_transform(X_train1)
 
-
+breakpoint()
+PCA_on_datasets( X_train1, y_train1, 65)
+ICA_on_datasets( mod_data, y_train1, 10)
+K_best_on_dataset( X_train1, y_train1, 530)
+RP_on_datasets( X_train1, y_train1, 475)
 
 
 
 breakpoint()
+kurtosis_analysis_new1( mod_data, y, 6)
+
+breakpoint()
+k_means1( 2, mod_data, y)
+EM( 2, x, y,'full')
+EM( 2, mod_data, y, 'full')
+gmm_analysis( mod_data, y)
+breakpoint()
+
+k_means( 2, mod_data, y)
+breakpoint()
+mod_data1 =  PCA( n_components = 65).fit_transform(X_train1)
+EM( 6, mod_data1, y_train1,'full')
+breakpoint()
+
+gmm_analysis( mod_data1, y_train1)
+k_means( 2, X_train1, y_train1)
+breakpoint()
+
+EM( 2, mod_data, y,'full')
+
+k_means( 2, x, y)
+k_means( 2, mod_data, y)
+breakpoint()
+EM( 2, x, y, 'spherical')
+EM( 2, x, y, 'tied')
+EM( 2, x, y, 'diag')
+EM( 2, x, y, 'full')
+mod_data1 =  PCA( n_components = 5).fit_transform(x)
+
+breakpoint()
+kurtosis_analysis_new1( mod_data1, y,5)
+
+ica = FastICA(max_iter = 500)
+
+S = ica.fit_transform(mod_data)
+clustering_analysis_after_dimension( S, y_train1)
 #reconstruction_error_pca(X_train1)
 
 #neural_network_analysis_EM( x, y)
@@ -867,40 +1089,11 @@ breakpoint()
 #EM_accuracy( X_train1, y_train1)
 
 
-#pca_analysis_accuracy( x, y)
-#X_pca1 = pca_analysis( x)
-#plotting_data1(pca,  X_pca1, y)
-#X_pca2 = pca_analysis( X_train1)
-#plotting_data2( X_pca2, y_train1)
-#breakpoint()
-#mod_data1 = X_pca1[:, :2]
-#mod_data2 = X_pca2[:, :2]
-
-#pca_analysis_accuracy( X_train1, y_train1)
-#pca_analysis_accuracy( mod_data2, y_train1)
-
-#plotting_data2( X_pca, y_train1)
-#Kmeans_clustering( mod_data1)
-#Kmeans_clustering(mod_data2)
-#Kmeans_silhouette_analysis( mod_data1, y)
-#Kmeans_silhouette_analysis(mod_data2, y_train1)
-#k_means( 2,mod_data1, y)
-#k_means(2,mod_data2, y_train1)
-#gmm_cluster = gmm_analysis( mod_data1,y)
-#gmm_cluster = gmm_analysis( mod_data2,y_train1)
-
-#gmm_using_silhouette(mod_data1, y)
-#gmm_using_silhouette(mod_data2, y_train1)
 
 
 
-### ICA ###
-#kurtosis_analysis(x)
-#Z_2d = FastICA(n_components = 2).fit_transform(X_train1)
-#Plot_2d(Z_2d,y_train1)
 
-#Z_3d = FastICA(n_components = 3).fit_transform(x)
-#Plot_3d(Z_3d,y)
+
 
 
 best_n = 5
@@ -918,31 +1111,6 @@ best_n = 5
 
 
 
-### Kbest ### 
-
-#reconstruction_error_K_best( x, y, 30)
-#reconstruction_error_K_best( X_train1, y_train1, 561)
-
-#x1 = preprocessing.MinMaxScaler().fit_transform(x)
-#data_k_best = SelectKBest(chi2, k=2).fit_transform(x1, y)
-
-#Plot_2d(data_k_best,y)
-
-#best_n = 24 
-#x1 = preprocessing.MinMaxScaler().fit_transform(x)
-#data_k_best = SelectKBest(chi2, k=best_n).fit_transform(x1, y)
-#EM_accuracy( x, y)
-#clustering_analysis_after_dimension( data_k_best, y)
-
-
-#x1 = preprocessing.MinMaxScaler().fit_transform(X_train1)
-
-#best_n = 530
-#data_k_best = SelectKBest(chi2, k=best_n).fit_transform(x1, y_train1)
-#clustering_analysis_after_dimension( data_k_best, y_train1)
-
-#Plot_2d(data_k_best,y_train1)
-#plotting_data2(data_k_best, y_train1 )
 
 
 
@@ -978,30 +1146,7 @@ best_n = 5
 
 
 
-RP_analysis(X_train1)
-#Z_2d = GaussianRandomProjection(n_components = 2).fit_transform(X_train1)
-#Plot_2d(Z_2d,y_train1)
 
-#Z_3d = GaussianRandomProjection(n_components = 3).fit_transform(X_train1)
-#Plot_3d(Z_3d,y_train1)
-best_n = 500
-
-data2_rp = GaussianRandomProjection(n_components = best_n).fit_transform(X_train1)
-clustering_analysis_after_dimension( data2_rp, y_train1)
-
-
-
-#RP_analysis(X_train1)
-#Z_2d = GaussianRandomProjection(n_components = 2).fit_transform(X_train1)
-#Plot_2d(Z_2d,y_train1)
-
-Z_3d = GaussianRandomProjection(n_components = 3).fit_transform(X_train1)
-plotting_data2( Z_3d, y_train1)
-#Plot_3d(Z_3d,y_train1)
-best_n = 475
-
-data2_rp = GaussianRandomProjection(n_components = best_n).fit_transform(X_train1)
-clustering_analysis_after_dimension( data2_rp, y_train1)
 
 
 
