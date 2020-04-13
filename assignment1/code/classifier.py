@@ -299,7 +299,7 @@ def optimized_Gradient_Boosting_classifier(train_data, train_labels, test_data, 
 
 
 
-def neural_network( train_data, train_labels, test_data, test_labels,plotting, lr=1e-02, alpha=1):
+def neural_network( train_data, train_labels, test_data, test_labels,plotting = False, lr=1e-02, alpha=1):
 
     #gt.neural_network_hidden_layers( train_data, train_labels, test_data, test_labels)
     clf= MLPClassifier( activation='relu',max_iter=5000, alpha=alpha, batch_size='auto', learning_rate= 'adaptive',solver='adam',
